@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import data from './data'
 import Article from './Article'
 
+// setting up local storage
 const getStorageTheme = () => {
+  // using let instead of const because it will change
   let theme = 'light-theme'
   if (localStorage.getItem('theme')){
     theme = localStorage.getItem('theme')
@@ -11,11 +13,14 @@ const getStorageTheme = () => {
 }
 
 function App() {
+  // invoke getStorage theme as the starting point
   const [theme, setTheme] = useState(getStorageTheme())
 
   useEffect(() => {
+    // apply directly to the HTML file
     document.documentElement.className = theme
     localStorage.setItem('theme', theme)
+    // invoke every time theme changes hence [theme]
   }, [theme])
 
   const toggleTheme = () => {

@@ -5,6 +5,7 @@ const Article = ({title, snippet, date, length}) => {
   return <article className="post">
     <h2>{title}</h2>
     <div className="post-info">
+      {/* google moment.js documentation for details  */}
       <span>{moment(date).format('MMM Do, YYYY')}</span>
       <span>{length} min read</span>
     </div>

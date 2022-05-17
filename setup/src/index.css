@@ -10,6 +10,9 @@ Global Styles
   --clr-primary: #d23669;
 } */
 
+/* following dark and light theme will be applied directly to the HTML file 
+hence commented out the upper root file variables */
+
 .dark-theme {
   --clr-bcg: #282c35;
   --clr-font: #fff;
